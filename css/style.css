@@ -1,0 +1,298 @@
+/* =========================================================
+   Shreekamal Oil Industries — Cattle Feed & Agro Products
+   Main stylesheet  (css/style.css)
+   Built to sit on top of Bootstrap 4 + Owl Carousel + Font Awesome
+   ========================================================= */
+
+:root{
+  /* Palette derived from the Shreekamal Oil Industries logo: deep navy + gold, rose & leaf accents */
+  --green:#1c2f5e;        /* primary (navy) */
+  --green-dk:#132147;     /* dark header / footer (deep navy) */
+  --green-darker:#0c1631; /* darkest navy */
+  --amber:#d4a017;        /* accent (gold) */
+  --amber-dk:#b3860e;     /* dark gold */
+  --rose:#d98a8a;         /* lotus accent */
+  --leaf:#4a7c3f;         /* leaf accent */
+  --ink:#20263a;
+  --muted:#5f6579;
+  --cream:#faf7ef;
+  --line:#eae3d4;
+  --white:#ffffff;
+  --shadow:0 18px 40px -22px rgba(12,22,49,.42);
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Open Sans',Arial,sans-serif;
+  color:var(--ink);
+  background:var(--white);
+  line-height:1.7;
+  overflow-x:hidden;
+}
+h1,h2,h3,h4,h5{font-family:'Poppins',sans-serif;line-height:1.2;color:var(--green-dk);font-weight:700}
+a{color:var(--green);text-decoration:none;transition:.2s}
+a:hover{color:var(--amber-dk);text-decoration:none}
+img{max-width:100%}
+.container{max-width:1180px}
+
+/* ---------- Preloader / splash screen ---------- */
+#preloader{position:fixed;inset:0;z-index:99999;display:flex;align-items:center;justify-content:center;background:#0c1631;transition:opacity .35s ease,visibility .35s ease}
+#preloader.hide{opacity:0;visibility:hidden}
+#preloader .pl-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+#preloader .pl-bar{position:absolute;bottom:12%;left:50%;transform:translateX(-50%);width:200px;height:4px;border-radius:4px;background:rgba(255,255,255,.22);overflow:hidden;z-index:2}
+#preloader .pl-bar span{position:absolute;left:0;top:0;height:100%;width:40%;background:var(--amber);border-radius:4px;animation:plBar 1.1s ease-in-out infinite}
+@keyframes plBar{0%{left:-40%}100%{left:100%}}
+
+/* ---------- Helpers ---------- */
+.text-amber{color:var(--amber)!important}
+.text-green{color:var(--green)!important}
+.bg-cream{background:var(--cream)}
+.section{padding:80px 0}
+.section-sm{padding:56px 0}
+
+.sec-title{margin-bottom:40px}
+.sec-title .eyebrow{
+  display:inline-block;font-family:'Poppins',sans-serif;font-weight:600;letter-spacing:.18em;
+  text-transform:uppercase;font-size:.78rem;color:var(--amber-dk);margin-bottom:10px;position:relative;
+}
+.sec-title .eyebrow::before{content:"";display:inline-block;width:26px;height:2px;background:var(--amber);vertical-align:middle;margin-right:10px}
+.sec-title h2{font-size:2.2rem;margin-bottom:14px}
+.sec-title p{color:var(--muted);max-width:640px}
+.sec-title.center{text-align:center}
+.sec-title.center p{margin-left:auto;margin-right:auto}
+.sec-title.center .eyebrow::after{content:"";display:inline-block;width:26px;height:2px;background:var(--amber);vertical-align:middle;margin-left:10px}
+
+/* ---------- Buttons ---------- */
+.btn{font-family:'Poppins',sans-serif;font-weight:600;border-radius:50px;padding:12px 28px;font-size:.95rem;transition:.22s;border:2px solid transparent}
+.btn-amber{background:var(--amber);color:var(--green-dk)}
+.btn-amber:hover{background:var(--amber-dk);color:#fff}
+.btn-green{background:var(--green);color:#fff}
+.btn-green:hover{background:var(--green-dk);color:#fff}
+.btn-outline-light-2{border-color:#fff;color:#fff;background:transparent}
+.btn-outline-light-2:hover{background:#fff;color:var(--green-dk)}
+.btn-outline-green{border-color:var(--green);color:var(--green);background:transparent}
+.btn-outline-green:hover{background:var(--green);color:#fff}
+
+/* ---------- Top bar ---------- */
+.topbar{background:var(--green-darker);color:#cfe7d3;font-size:.85rem}
+.topbar .container{display:flex;justify-content:space-between;align-items:center;min-height:42px;flex-wrap:wrap}
+.topbar a{color:#cfe7d3}
+.topbar a:hover{color:var(--amber)}
+.topbar .tb-left span{margin-right:20px}
+.topbar .tb-left i,.topbar .tb-right i{color:var(--amber);margin-right:7px}
+.topbar .tb-right a{margin-left:16px}
+
+/* ---------- Navbar ---------- */
+.navbar{background:#fff;box-shadow:0 4px 18px rgba(15,74,34,.08);padding:.6rem 0}
+.navbar .navbar-brand{display:flex;align-items:center;padding:0}
+.navbar .navbar-brand img.brand-logo{height:60px;width:auto;display:block}
+@media (max-width:575px){.navbar .navbar-brand img.brand-logo{height:48px}}
+.navbar .nav-link{font-family:'Poppins',sans-serif;font-weight:500;color:var(--ink)!important;padding:.6rem 1rem!important;position:relative}
+.navbar .nav-link:hover,.navbar .nav-item.active .nav-link{color:var(--green)!important}
+.navbar .nav-item.active .nav-link::after,.navbar .nav-link:hover::after{content:"";position:absolute;left:1rem;right:1rem;bottom:2px;height:2px;background:var(--amber)}
+.navbar .btn{margin-left:10px}
+.navbar-toggler{border-color:var(--green)}
+.navbar-toggler-icon{background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='%231f8a4c' stroke-width='2.5' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")}
+
+/* ---------- Hero carousel ---------- */
+.hero{position:relative}
+.hero .owl-carousel .item{
+  min-height:620px;display:flex;align-items:center;position:relative;
+  background-size:cover;background-position:center right;background-color:var(--green-dk);
+}
+.hero .owl-carousel .item::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(12,22,49,.90) 0%,rgba(12,22,49,.66) 32%,rgba(12,22,49,.20) 62%,rgba(12,22,49,.02) 100%)}
+.hero .caption{color:#fff;max-width:640px;padding:40px 0;position:relative;z-index:2}
+/* logo watermark on the hero */
+/* logo watermark badge on the hero */
+.hero-watermark{position:absolute;right:26px;top:22px;z-index:3;pointer-events:none;padding:12px 16px;border-radius:16px;background:rgba(255,255,255,.16);-webkit-backdrop-filter:blur(7px);backdrop-filter:blur(7px);border:1px solid rgba(255,255,255,.28);box-shadow:0 12px 30px -14px rgba(0,0,0,.5)}
+.hero-watermark img{width:150px;display:block}
+/* grass dividers (Kapila-style) */
+.grass{position:absolute;left:0;right:0;width:100%;height:46px;line-height:0;pointer-events:none;z-index:4}
+.grass svg{display:block;width:100%;height:100%}
+.grass-hero{bottom:-1px;color:#ffffff}
+.hero .caption .eyebrow{color:var(--amber);font-family:'Poppins',sans-serif;font-weight:600;letter-spacing:.2em;text-transform:uppercase;font-size:.85rem;margin-bottom:14px;display:block}
+.hero .caption h1{color:#fff;font-size:3.3rem;margin-bottom:18px;text-shadow:0 6px 24px rgba(0,0,0,.25)}
+.hero .caption h1 span{color:var(--amber)}
+.hero .caption p{font-size:1.15rem;color:#eaf5ea;margin-bottom:28px;max-width:540px}
+.hero .caption .btn{margin-right:12px;margin-bottom:10px}
+.hero .owl-nav button{position:absolute;top:50%;transform:translateY(-50%);width:52px;height:52px;border-radius:50%!important;background:rgba(255,255,255,.15)!important;color:#fff!important;font-size:1.6rem!important;transition:.2s}
+.hero .owl-nav button:hover{background:var(--amber)!important;color:var(--green-dk)!important}
+.hero .owl-nav .owl-prev{left:20px}
+.hero .owl-nav .owl-next{right:20px}
+.hero .owl-dots{position:absolute;bottom:24px;left:0;right:0;text-align:center}
+.hero .owl-dots .owl-dot span{width:12px;height:12px;background:rgba(255,255,255,.5)!important;margin:5px}
+.hero .owl-dots .owl-dot.active span{background:var(--amber)!important;width:30px;border-radius:6px}
+
+/* ---------- Feature strip (under hero) ---------- */
+/* ---------- Floating feature bar (overlaps hero bottom, Kapila-style) ---------- */
+.feature-strip{position:relative;z-index:5;margin-top:36px}
+.feature-strip .fs-card{background:#fff;border-radius:16px;box-shadow:0 26px 55px -26px rgba(12,22,49,.45);overflow:hidden}
+.feature-strip .fs-item{display:flex;align-items:center;gap:16px;padding:26px 22px}
+.feature-strip .fs-item .fi{width:56px;height:56px;flex:0 0 56px;border-radius:13px;background:linear-gradient(140deg,var(--green),var(--green-darker));color:var(--amber);display:flex;align-items:center;justify-content:center;font-size:1.5rem}
+.feature-strip .fs-item h5{color:var(--green-dk);margin:0 0 2px;font-size:1.06rem}
+.feature-strip .fs-item p{margin:0;font-size:.85rem;color:var(--muted)}
+.feature-strip [class*="col-"]:not(:last-child) .fs-item{border-right:1px solid var(--line)}
+
+/* ---------- About ---------- */
+.about-img{position:relative;border-radius:16px;overflow:hidden;box-shadow:var(--shadow);background:linear-gradient(160deg,#e7f2e6,#f6f7e6);min-height:420px}
+.about-badge{position:absolute;right:-10px;bottom:24px;background:var(--green);color:#fff;padding:20px 24px;border-radius:14px;box-shadow:var(--shadow)}
+.about-badge .n{font-family:'Poppins',sans-serif;font-weight:800;font-size:2.2rem;line-height:1;color:#fff}
+.about-badge small{font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:#d6ecd6}
+.about ul.ticks{list-style:none;margin-top:20px}
+.about ul.ticks li{position:relative;padding-left:34px;margin-bottom:12px;font-weight:600;color:var(--ink)}
+.about ul.ticks li i{position:absolute;left:0;top:4px;color:#fff;background:var(--green);width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.7rem}
+
+/* ---------- Why-choose cards ---------- */
+.why-card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:32px 26px;height:100%;transition:.25s;text-align:center}
+.why-card:hover{transform:translateY(-8px);box-shadow:var(--shadow);border-color:var(--amber)}
+.why-card .ic{width:74px;height:74px;border-radius:50%;background:var(--cream);color:var(--green);display:flex;align-items:center;justify-content:center;font-size:1.9rem;margin:0 auto 18px;transition:.25s}
+.why-card:hover .ic{background:var(--green);color:#fff}
+.why-card h4{font-size:1.2rem;margin-bottom:10px}
+.why-card p{color:var(--muted);font-size:.94rem;margin:0}
+
+/* ---------- Counters ---------- */
+.counters{background:linear-gradient(120deg,var(--green-dk),var(--green));color:#fff;position:relative}
+.counters::before{content:"";position:absolute;inset:0;background:radial-gradient(700px 300px at 85% 0,rgba(247,168,0,.22),transparent 60%)}
+.counter-box{text-align:center;padding:20px;position:relative}
+.counter-box i{font-size:2.1rem;color:var(--amber);margin-bottom:12px}
+.counter-box .count{font-family:'Poppins',sans-serif;font-weight:800;font-size:2.8rem;color:#fff;line-height:1}
+.counter-box .count .suf{color:var(--amber)}
+.counter-box p{color:#d6ecd6;margin:8px 0 0;letter-spacing:.03em}
+
+/* ---------- Products ---------- */
+.product-card{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;height:100%;transition:.25s;display:flex;flex-direction:column}
+.product-card:hover{transform:translateY(-8px);box-shadow:var(--shadow)}
+.product-card .thumb{height:200px;background:linear-gradient(160deg,#e9f4e8,#f6f3e2);display:flex;align-items:center;justify-content:center;position:relative}
+.product-card .thumb .badge-cat{position:absolute;top:14px;left:14px;background:var(--amber);color:var(--green-dk);font-family:'Poppins',sans-serif;font-weight:600;font-size:.72rem;padding:5px 12px;border-radius:50px;letter-spacing:.04em}
+.product-card .p-body{padding:22px;flex:1;display:flex;flex-direction:column}
+.product-card h4{font-size:1.22rem;margin-bottom:8px}
+.product-card p{color:var(--muted);font-size:.92rem;flex:1}
+.product-card .p-link{font-family:'Poppins',sans-serif;font-weight:600;color:var(--green);margin-top:12px;display:inline-flex;align-items:center;gap:6px}
+.product-card .p-link:hover{color:var(--amber-dk);gap:10px}
+
+/* ---------- Gold products section (Kapila-style) ---------- */
+.products-gold{position:relative;background:linear-gradient(180deg,#f3b616,#e6a70d)}
+.products-gold .grass-top{top:0;transform:translateY(-100%);color:#f3b616;z-index:6}
+.products-gold .sec-title .eyebrow{color:var(--green-dk)}
+.products-gold .sec-title .eyebrow::before,.products-gold .sec-title .eyebrow::after{background:var(--green-dk)}
+.products-gold .sec-title h2{color:var(--green-darker)}
+.products-gold .sec-title p{color:#5f4b12}
+.products-gold .btn-outline-green{border-color:var(--green-dk);color:var(--green-dk)}
+.products-gold .btn-outline-green:hover{background:var(--green-dk);color:#fff}
+
+/* ---------- Get In Touch button ---------- */
+.btn-getintouch{background:var(--green-dk);color:#fff;padding:7px 8px 7px 24px;display:inline-flex;align-items:center;gap:12px;border-radius:50px;font-family:'Poppins',sans-serif;font-weight:600;font-size:.95rem}
+.btn-getintouch:hover{background:var(--green);color:#fff}
+.btn-getintouch .gi-arrow{width:30px;height:30px;border-radius:50%;background:var(--amber);color:var(--green-dk);display:inline-flex;align-items:center;justify-content:center;font-size:.9rem}
+
+/* ---------- Customer reviews (Owl slider) + village watermark bg ---------- */
+.reviews{position:relative;background:var(--cream);overflow:hidden}
+.reviews .village-bg{
+  position:absolute;left:0;right:0;bottom:0;height:78%;
+  background:url('../IMAGES/village-bg.jpg') center bottom / cover no-repeat;
+  opacity:.16;filter:grayscale(100%);pointer-events:none;z-index:0;
+  -webkit-mask-image:linear-gradient(180deg,transparent,#000 40%);
+  mask-image:linear-gradient(180deg,transparent,#000 40%);
+}
+.reviews .container{position:relative;z-index:2}
+
+.review-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:30px 26px 26px;margin:14px 8px 30px;box-shadow:0 16px 36px -26px rgba(12,22,49,.4);position:relative;transition:.25s}
+.review-card:hover{transform:translateY(-6px);box-shadow:0 26px 50px -26px rgba(12,22,49,.5)}
+.review-card .quote-ic{position:absolute;top:-16px;left:26px;width:40px;height:40px;border-radius:50%;background:var(--amber);color:var(--green-dk);display:flex;align-items:center;justify-content:center;font-size:1rem;box-shadow:0 8px 18px -8px rgba(212,160,23,.9)}
+.review-card .stars{color:var(--amber);font-size:.9rem;margin:6px 0 12px;letter-spacing:2px}
+.review-card p.rv-text{color:var(--muted);font-size:.95rem;min-height:96px}
+.review-card .rv-user{display:flex;align-items:center;gap:14px;border-top:1px solid var(--line);padding-top:16px;margin-top:6px}
+.review-card .rv-user img{width:52px;height:52px;border-radius:50%;object-fit:cover;border:2px solid var(--amber)}
+.review-card .rv-user b{display:block;color:var(--green-dk);font-family:'Poppins',sans-serif;font-size:1rem;line-height:1.2}
+.review-card .rv-user span{color:var(--muted);font-size:.82rem}
+
+.reviews-carousel .owl-dots{text-align:center;margin-top:6px}
+.reviews-carousel .owl-dots .owl-dot span{width:10px;height:10px;background:#c7cede!important;margin:5px}
+.reviews-carousel .owl-dots .owl-dot.active span{background:var(--amber)!important;width:26px;border-radius:6px}
+.reviews-carousel .owl-nav button{width:44px;height:44px;border-radius:50%!important;background:#fff!important;color:var(--green-dk)!important;border:1px solid var(--line)!important;font-size:1.2rem!important;margin:0 6px!important;transition:.2s}
+.reviews-carousel .owl-nav button:hover{background:var(--green-dk)!important;color:var(--amber)!important}
+.reviews-carousel .owl-nav{text-align:center;margin-top:4px}
+
+/* ---------- Split / infrastructure ---------- */
+.split-media{border-radius:16px;min-height:400px;box-shadow:var(--shadow);background:linear-gradient(160deg,#eaf4e8,#f5f2e2)}
+.split-media.dark{background:linear-gradient(150deg,var(--green-dk),#26407e)}
+
+/* ---------- CTA band ---------- */
+.cta-band{background:linear-gradient(120deg,var(--green-dk),var(--green));color:#fff;border-radius:20px;padding:48px 44px;position:relative;overflow:hidden}
+.cta-band::after{content:"\f0f4";font-family:"Font Awesome 6 Free";font-weight:900;position:absolute;right:30px;top:50%;transform:translateY(-50%);font-size:8rem;opacity:.08}
+.cta-band h2{color:#fff;font-size:2rem}
+.cta-band p{color:#e6f3e6;margin-bottom:0}
+
+/* ---------- Certifications ---------- */
+.cert{display:flex;gap:16px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px}
+.cert .cmark{width:56px;height:56px;flex:0 0 56px;border-radius:12px;background:var(--green-dk);color:var(--amber);display:flex;align-items:center;justify-content:center;font-size:1.6rem}
+.cert b{color:var(--green-dk);font-family:'Poppins',sans-serif;display:block}
+.cert span{color:var(--muted);font-size:.85rem}
+
+/* ---------- Gallery ---------- */
+.gallery-item{border-radius:14px;overflow:hidden;position:relative;min-height:230px;background:linear-gradient(160deg,#e7f2e6,#f5f2e2);display:flex;align-items:center;justify-content:center;color:var(--green-dk);transition:.25s}
+.gallery-item:hover{transform:scale(1.02);box-shadow:var(--shadow)}
+.gallery-item .g-cap{position:absolute;left:0;right:0;bottom:0;background:linear-gradient(0deg,rgba(14,74,34,.85),transparent);color:#fff;padding:26px 18px 14px;font-family:'Poppins',sans-serif;font-weight:600;opacity:0;transition:.25s}
+.gallery-item:hover .g-cap{opacity:1}
+
+/* ---------- Image helpers (dummy images live in /IMAGES) ---------- */
+.product-card .thumb-img{width:100%;height:200px;object-fit:cover;display:block}
+.about-photo,.split-photo{width:100%;border-radius:16px;object-fit:cover;box-shadow:var(--shadow);display:block}
+.about-wrap{position:relative}
+.gallery-item img.gallery-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.gallery-item .g-cap{z-index:2}
+
+/* ---------- Page banner (inner pages) ---------- */
+.page-banner{background:linear-gradient(120deg,rgba(12,22,49,.92),rgba(28,47,94,.75)),linear-gradient(160deg,#132147,#0c1631);color:#fff;padding:78px 0 60px;text-align:center}
+.page-banner h1{color:#fff;font-size:2.7rem;margin-bottom:8px}
+.page-banner .crumb{color:#d6ecd6;font-family:'Poppins',sans-serif;font-weight:500}
+.page-banner .crumb a{color:var(--amber)}
+.page-banner .crumb i{margin:0 8px;font-size:.7rem}
+
+/* ---------- Contact ---------- */
+.contact-card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:26px;height:100%}
+.contact-card .ci{width:52px;height:52px;border-radius:12px;background:var(--cream);color:var(--green);display:flex;align-items:center;justify-content:center;font-size:1.3rem;margin-bottom:14px}
+.contact-card b{display:block;color:var(--green-dk);font-family:'Poppins',sans-serif}
+.contact-form{background:#fff;border:1px solid var(--line);border-radius:16px;padding:34px;box-shadow:var(--shadow)}
+.contact-form .form-control{border:1px solid var(--line);border-radius:10px;padding:12px 16px;background:var(--cream);font-size:.95rem}
+.contact-form .form-control:focus{border-color:var(--amber);box-shadow:0 0 0 3px rgba(247,168,0,.18)}
+.form-msg{display:none;margin-top:14px;padding:12px 16px;border-radius:10px;background:#e6f3e6;color:var(--green-dk);font-size:.92rem}
+.form-msg.show{display:block}
+.map-wrap{border-radius:16px;overflow:hidden;min-height:340px;border:1px solid var(--line);background:linear-gradient(160deg,#e7f2e6,#eef4df);display:flex;align-items:center;justify-content:center;color:var(--muted)}
+
+/* ---------- Footer ---------- */
+footer.site-footer{background:var(--green-darker);color:#bcd7c0;padding:64px 0 0;position:relative;overflow:hidden}
+footer.site-footer::before{
+  content:"";position:absolute;left:0;right:0;bottom:0;height:70%;
+  background:url('../IMAGES/village-bg.jpg') center bottom / cover no-repeat;
+  opacity:.07;filter:grayscale(100%) invert(1);pointer-events:none;
+}
+footer.site-footer .container{position:relative;z-index:2}
+footer.site-footer .navbar-brand,footer.site-footer h5{color:#fff}
+footer.site-footer .f-brand{margin-bottom:14px}
+footer.site-footer .f-brand .wm{font-family:'Poppins',sans-serif;font-weight:800;font-size:1.6rem;color:#fff;line-height:1;letter-spacing:.01em}
+footer.site-footer .f-brand .wm b{color:var(--amber)}
+footer.site-footer .f-brand .wm-sub{display:block;font-family:'Poppins',sans-serif;font-weight:600;font-size:.72rem;letter-spacing:.28em;color:#c7cede;text-transform:uppercase;margin-top:5px}
+footer.site-footer .f-brand .wm-tag{display:block;font-family:'Open Sans',sans-serif;font-style:italic;font-size:.8rem;color:var(--amber);margin-top:8px;letter-spacing:.02em}
+footer.site-footer p{font-size:.92rem;color:#a9c9ae}
+footer.site-footer h5{font-family:'Poppins',sans-serif;font-size:1.05rem;margin-bottom:18px;position:relative;padding-bottom:10px}
+footer.site-footer h5::after{content:"";position:absolute;left:0;bottom:0;width:36px;height:2px;background:var(--amber)}
+footer.site-footer ul{list-style:none}
+footer.site-footer ul li{margin-bottom:10px}
+footer.site-footer ul a{color:#bcd7c0;font-size:.92rem}
+footer.site-footer ul a:hover{color:var(--amber);padding-left:5px}
+footer.site-footer .f-contact li{display:flex;gap:12px;align-items:flex-start;color:#bcd7c0;font-size:.92rem}
+footer.site-footer .f-contact i{color:var(--amber);margin-top:5px}
+footer.site-footer .f-social a{width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.08);color:#fff;display:inline-flex;align-items:center;justify-content:center;margin-right:8px;transition:.2s}
+footer.site-footer .f-social a:hover{background:var(--amber);color:var(--green-dk)}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.12);margin-top:48px;padding:20px 0;font-size:.86rem;color:#9cbfa1}
+.footer-bottom a{color:var(--amber)}
+
+/* ---------- Back to top ---------- */
+#toTop{position:fixed;right:24px;bottom:24px;width:48px;height:48px;border-radius:50%;background:var(--green);color:#fff;border:none;display:none;align-items:center;justify-content:center;font-size:1.1rem;box-shadow:var(--shadow);z-index:60;cursor:pointer}
+#toTop:hover{background:var(--amber);color:var(--green-dk)}
+#toTop.show{display:flex}
+
+/* reduced motion */
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
