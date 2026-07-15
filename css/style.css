@@ -244,9 +244,12 @@ img{max-width:100%}
 .gallery-item .g-cap{z-index:2}
 
 /* ---------- Page banner (inner pages) ---------- */
-.page-banner{background:linear-gradient(120deg,rgba(12,22,49,.92),rgba(28,47,94,.75)),linear-gradient(160deg,#132147,#0c1631);color:#fff;padding:78px 0 60px;text-align:center}
+.page-banner{position:relative;background:#132147 center/cover no-repeat;color:#fff;padding:110px 0 84px;text-align:center;overflow:hidden}
+.page-banner::before{content:"";position:absolute;inset:0;background:linear-gradient(120deg,rgba(12,22,49,.86),rgba(12,22,49,.55))}
+.page-banner .container{position:relative;z-index:2}
 .page-banner h1{color:#fff;font-size:2.7rem;margin-bottom:8px}
-.page-banner .crumb{color:#d6ecd6;font-family:'Poppins',sans-serif;font-weight:500}
+.page-banner h1::after{content:"";display:block;width:66px;height:4px;background:var(--amber);border-radius:4px;margin:14px auto 0}
+.page-banner .crumb{color:#d7dbe6;font-family:'Poppins',sans-serif;font-weight:500;margin-top:14px}
 .page-banner .crumb a{color:var(--amber)}
 .page-banner .crumb i{margin:0 8px;font-size:.7rem}
 
