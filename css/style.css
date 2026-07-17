@@ -171,6 +171,15 @@ img{max-width:100%}
 .product-card .p-link{font-family:'Poppins',sans-serif;font-weight:600;color:var(--green);margin-top:12px;display:inline-flex;align-items:center;gap:6px}
 .product-card .p-link:hover{color:var(--amber-dk);gap:10px}
 
+/* ---------- Kapila-style product cards (home) ---------- */
+.kp-product{display:block;background:#fff;border-radius:14px;padding:22px 18px;text-align:center;height:100%;box-shadow:0 14px 34px -24px rgba(12,22,49,.4);transition:transform .22s ease,box-shadow .22s ease}
+.kp-product:hover{transform:translateY(-8px);box-shadow:0 30px 54px -26px rgba(12,22,49,.5);text-decoration:none}
+.kp-thumb{height:230px;display:flex;align-items:center;justify-content:center;margin-bottom:8px;overflow:hidden}
+.kp-thumb img{max-height:230px;width:auto;object-fit:contain;transition:transform .25s ease}
+.kp-product:hover .kp-thumb img{transform:scale(1.05)}
+.kp-product h4{font-size:1.08rem;color:var(--green-dk);font-family:'Poppins',sans-serif;font-weight:600;margin:0}
+.kp-product:hover h4{color:var(--amber-dk)}
+
 /* ---------- Gold products section (Kapila-style) ---------- */
 .products-gold{position:relative;background:linear-gradient(180deg,#f3b616,#e6a70d)}
 .products-gold .grass-top{top:0;transform:translateY(-100%);color:#f3b616;z-index:6}
@@ -213,6 +222,94 @@ img{max-width:100%}
 .reviews-carousel .owl-nav button{width:44px;height:44px;border-radius:50%!important;background:#fff!important;color:var(--green-dk)!important;border:1px solid var(--line)!important;font-size:1.2rem!important;margin:0 6px!important;transition:.2s}
 .reviews-carousel .owl-nav button:hover{background:var(--green-dk)!important;color:var(--amber)!important}
 .reviews-carousel .owl-nav{text-align:center;margin-top:4px}
+
+/* ---------- Meet Our Founder (Kapila-style) ---------- */
+.founder{position:relative;background:#fff;padding-bottom:120px}
+.founder-eyebrow{display:inline-flex;align-items:center;gap:10px;color:var(--leaf);font-family:Georgia,'Times New Roman',serif;font-style:italic;font-weight:700;font-size:1.05rem;margin-bottom:16px}
+.founder-eyebrow i{color:var(--amber)}
+.founder-h2{font-family:'Poppins',sans-serif;font-weight:800;color:var(--green-dk);font-size:clamp(2rem,4vw,3rem);margin:0}
+.founder-head{display:flex;gap:26px;align-items:center;margin-bottom:24px}
+.founder-pic{width:150px;height:150px;flex:0 0 150px;border-radius:50%;object-fit:cover;border:4px solid #fff;box-shadow:0 16px 36px -18px rgba(12,22,49,.5),0 0 0 2px var(--line)}
+.founder-name h3{font-family:'Poppins',sans-serif;font-weight:700;color:var(--green-dk);font-size:1.5rem;margin:0 0 8px}
+.founder-name .fn-role{color:var(--amber-dk);font-weight:600;font-size:.98rem;margin:0;line-height:1.5}
+.founder-bio p{color:var(--muted);font-size:.97rem;margin-bottom:14px}
+.founder-bio p:last-child{margin-bottom:0}
+.grass-founder{position:absolute;left:0;right:0;bottom:-1px;width:100%;height:70px;line-height:0;z-index:2;color:#f3b616;pointer-events:none}
+.grass-founder svg{display:block;width:100%;height:100%}
+
+/* ---------- Infrastructure (Kapila-style 2-col) ---------- */
+.infra2{background:#faf7ef}
+.infra-eyebrow{display:block;color:var(--leaf);font-family:Georgia,'Times New Roman',serif;font-style:italic;font-weight:700;font-size:1.05rem;margin-bottom:12px}
+.infra-h2{font-family:'Poppins',sans-serif;font-weight:800;color:var(--green-dk);font-size:clamp(1.8rem,3.4vw,2.5rem);line-height:1.12;margin-bottom:18px}
+.infra2 p{color:var(--muted);margin-bottom:16px;font-size:.97rem}
+.infra-photo{margin-top:26px;border-radius:16px;overflow:hidden;box-shadow:0 24px 50px -28px rgba(12,22,49,.45)}
+.infra-photo img{width:100%;display:block}
+.infra-gold{position:relative;background:linear-gradient(160deg,#f3b616,#e6a70d);border:1px dashed rgba(60,40,0,.28);border-radius:22px;padding:30px;margin-bottom:24px;box-shadow:0 24px 46px -28px rgba(230,167,13,.7)}
+.infra-gold .ig-ic{position:absolute;right:26px;top:26px;width:52px;height:52px;border-radius:50%;background:#3a2a08;color:#f3b616;display:flex;align-items:center;justify-content:center;font-size:1.3rem}
+.infra-gold .ig-lab{color:#5c4a12;font-weight:600;font-size:.98rem}
+.infra-gold .ig-num{font-family:'Poppins',sans-serif;font-weight:800;color:#2a2205;font-size:3rem;line-height:1;margin:6px 0 14px}
+.infra-gold p{color:#5c4a12;font-size:.92rem;margin:0}
+.infra-dark{background:linear-gradient(160deg,var(--green-dk),var(--green-darker));border:1px dashed rgba(255,255,255,.2);border-radius:22px;padding:32px 30px;box-shadow:0 26px 50px -30px rgba(12,22,49,.6)}
+.infra-dark ul{list-style:none;margin:0;padding:0}
+.infra-dark li{display:flex;gap:13px;align-items:flex-start;color:#eaf0f6;font-weight:500;font-size:.98rem;margin-bottom:20px}
+.infra-dark li:last-child{margin-bottom:0}
+.infra-dark li i{color:var(--amber);margin-top:3px;font-size:1.05rem}
+
+/* ---------- Our Story / Legacy ---------- */
+.legacy{background:linear-gradient(180deg,#f4efe3 0%,#faf7ef 100%)}
+.legacy-card{position:relative;border-radius:24px;padding:30px;overflow:hidden;background:linear-gradient(150deg,#0f4a4a 0%,#123a5e 55%,#0c1f3d 100%);box-shadow:0 30px 60px -30px rgba(12,31,61,.6)}
+.legacy-card::before{content:"";position:absolute;right:-60px;top:-60px;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,rgba(212,160,23,.28),transparent 70%);pointer-events:none}
+.lg-stat{position:relative;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:22px 20px;margin-bottom:16px;backdrop-filter:blur(2px)}
+.lg-stat .k{font-family:Georgia,'Times New Roman',serif;font-weight:700;font-size:2.1rem;color:var(--amber);line-height:1}
+.lg-stat span{display:block;color:#c7d2d8;font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;margin-top:8px}
+.lg-stat-wide .k{font-size:2.4rem}
+.lg-led{text-align:center;margin-top:8px}
+.lg-led .l1{color:#aebfc5;font-size:.9rem;margin:0}
+.lg-led .l2{font-family:Georgia,'Times New Roman',serif;font-weight:700;color:var(--amber);font-size:1.35rem;margin:4px 0 2px}
+.lg-led .l3{color:#aebfc5;font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;margin:0}
+.legacy .eyebrow{color:var(--amber-dk)}
+.legacy-h2{font-family:Georgia,'Times New Roman',serif;color:var(--green-dk);font-weight:700;font-size:clamp(2rem,3.8vw,2.9rem);line-height:1.12;margin:14px 0 26px}
+.timeline{list-style:none;margin:0;padding:0;position:relative}
+.timeline::before{content:"";position:absolute;left:7px;top:6px;bottom:10px;width:2px;background:linear-gradient(180deg,var(--amber),rgba(212,160,23,.25))}
+.timeline li{position:relative;padding:0 0 26px 34px}
+.timeline li::before{content:"";position:absolute;left:0;top:4px;width:16px;height:16px;border-radius:50%;background:var(--amber);box-shadow:0 0 0 4px rgba(212,160,23,.18)}
+.timeline li:last-child{padding-bottom:0}
+.timeline h5{font-family:'Poppins',sans-serif;font-weight:700;color:var(--amber-dk);font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;margin:0 0 6px}
+.timeline p{color:var(--muted);font-size:.95rem;margin:0}
+
+/* ---------- Floating social buttons ---------- */
+.floasoc{position:fixed;right:22px;bottom:22px;z-index:70;display:flex;flex-direction:column;gap:14px}
+.floasoc a{position:relative;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.5rem;box-shadow:0 12px 26px -8px rgba(0,0,0,.4);transition:transform .2s ease}
+.floasoc a:hover{transform:scale(1.08);color:#fff}
+.floasoc .wa{background:linear-gradient(145deg,#25d366,#0f9d58)}
+.floasoc .ig{background:radial-gradient(circle at 30% 110%,#feda75,#fa7e1e 30%,#d62976 55%,#962fbf 80%,#4f5bd5)}
+.floasoc a::after{content:attr(data-label);position:absolute;right:68px;top:50%;transform:translateY(-50%) translateX(8px);background:#132147;color:#fff;font-family:'Poppins',sans-serif;font-size:.82rem;font-weight:600;padding:8px 14px;border-radius:8px;white-space:nowrap;opacity:0;visibility:hidden;transition:.2s;box-shadow:0 10px 24px -10px rgba(0,0,0,.5)}
+.floasoc a::before{content:"";position:absolute;right:62px;top:50%;transform:translateY(-50%);border:7px solid transparent;border-left-color:#132147;opacity:0;visibility:hidden;transition:.2s}
+.floasoc a:hover::after,.floasoc a:hover::before{opacity:1;visibility:visible;transform:translateY(-50%) translateX(0)}
+.floasoc a:hover::before{transform:translateY(-50%)}
+.floasoc .wa-pulse::after{content:none}
+
+/* ---------- 3-column info (Why / Benefits / Technology) ---------- */
+.infocols .info-card{display:block;height:100%;color:inherit;transition:transform .22s ease}
+.infocols .info-card:hover{transform:translateY(-6px);text-decoration:none}
+.infocols .info-media{position:relative;height:230px;border-radius:16px;background-size:cover;background-position:center;box-shadow:0 20px 44px -26px rgba(12,22,49,.45);margin-bottom:40px}
+.infocols .info-ic{position:absolute;left:26px;bottom:-28px;width:66px;height:66px;border-radius:50%;background:var(--amber);color:var(--green-dk);display:flex;align-items:center;justify-content:center;font-size:1.6rem;box-shadow:0 12px 26px -10px rgba(212,160,23,.8);transition:.22s}
+.infocols .info-card:hover .info-ic{background:var(--green-dk);color:var(--amber);transform:scale(1.06)}
+.infocols h3{font-size:1.35rem;color:var(--green-dk);font-family:'Poppins',sans-serif;font-weight:700;margin:0 0 12px}
+.infocols .info-card:hover h3{color:var(--amber-dk)}
+.infocols p{color:var(--muted);font-size:.95rem;margin:0}
+
+/* ---------- The Shreekamal Group ---------- */
+.group{position:relative;background:linear-gradient(180deg,#f3eee1 0%,#faf7ef 100%);overflow:hidden}
+.group::after{content:"";position:absolute;left:-70px;bottom:-70px;width:240px;height:240px;border-radius:50%;border:2px solid rgba(212,160,23,.16);pointer-events:none}
+.group .sec-title .eyebrow{color:var(--amber-dk)}
+.group-h2{font-family:Georgia,'Times New Roman',serif;color:var(--green-dk);font-weight:700;font-size:clamp(2rem,3.8vw,2.8rem);margin:14px 0 14px}
+.group .sec-title p{color:var(--muted)}
+.group-card{position:relative;background:#fff;border:1px solid var(--line);border-radius:18px;padding:34px 30px;height:100%;transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+.group-card:hover{transform:translateY(-8px);box-shadow:0 30px 56px -30px rgba(12,22,49,.4);border-color:var(--amber)}
+.gc-ic{width:64px;height:64px;border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:1.6rem;color:var(--amber);background:linear-gradient(140deg,var(--green),var(--green-darker));margin-bottom:20px;box-shadow:0 12px 26px -12px rgba(12,22,49,.5)}
+.group-card h4{font-family:Georgia,'Times New Roman',serif;font-weight:700;color:var(--green-dk);font-size:1.3rem;margin-bottom:12px}
+.group-card p{color:var(--muted);font-size:.95rem;margin:0}
 
 /* ---------- Pan India Presence (states) ---------- */
 .states{position:relative;background:#e7dfca}
@@ -307,7 +404,7 @@ footer.site-footer .f-social a:hover{background:var(--amber);color:var(--green-d
 .footer-bottom a{color:var(--amber)}
 
 /* ---------- Back to top ---------- */
-#toTop{position:fixed;right:24px;bottom:24px;width:48px;height:48px;border-radius:50%;background:var(--green);color:#fff;border:none;display:none;align-items:center;justify-content:center;font-size:1.1rem;box-shadow:var(--shadow);z-index:60;cursor:pointer}
+#toTop{position:fixed;left:24px;bottom:24px;width:48px;height:48px;border-radius:50%;background:var(--green);color:#fff;border:none;display:none;align-items:center;justify-content:center;font-size:1.1rem;box-shadow:var(--shadow);z-index:60;cursor:pointer}
 #toTop:hover{background:var(--amber);color:var(--green-dk)}
 #toTop.show{display:flex}
 
