@@ -3,15 +3,13 @@
    ========================================================= */
 
 @media (max-width:1199px){
-  .hero .caption h1{font-size:2.9rem}
 }
 
 @media (max-width:991px){
   .section{padding:60px 0}
   .sec-title h2{font-size:1.9rem}
   .hero .owl-carousel .item{min-height:480px}
-  .hero .caption h1{font-size:2.4rem}
-  .hero .caption p{font-size:1.05rem}
+
   .navbar{padding:.4rem 0}
   .navbar-collapse{background:#fff;margin-top:12px;border-radius:12px;padding:10px 14px;box-shadow:0 12px 30px rgba(15,74,34,.12)}
   .navbar .btn{margin:10px 0 4px}
@@ -33,16 +31,15 @@
 @media (max-width:767px){
   .topbar{display:none}
   .section{padding:48px 0}
-  .hero .owl-carousel .item::before{background:linear-gradient(90deg,rgba(12,22,49,.90),rgba(12,22,49,.55))}
   .hero-watermark{display:none}
   .feature-strip{margin-top:22px}
   .grass{height:30px}
-  .hero .caption h1{font-size:2rem}
-  .hero .caption .btn{display:block;width:100%;margin-right:0}
-  .hero .owl-nav{display:none}
   .counter-box{padding:14px}
   .counter-box .count{font-size:2rem}
   .cert{padding:16px}
+  .im-head{flex-wrap:wrap}
+  .im-btn{width:100%;text-align:center;margin-top:4px}
+  .im-frame{height:220px}
   .review-card{margin:14px 4px 26px;padding:26px 20px 22px}
   .review-card p.rv-text{min-height:auto}
   .reviews .village-bg{opacity:.10}

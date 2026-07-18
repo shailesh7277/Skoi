@@ -30,13 +30,15 @@
     $(".hero-carousel").owlCarousel({
       items: 1,
       loop: true,
-      nav: true,
-      dots: true,
+      nav: false,          // manual arrows removed
+      dots: false,         // manual dots removed
       autoplay: true,
-      autoplayTimeout: 5000,
-      autoplayHoverPause: true,
-      smartSpeed: 700,
-      navText: ['<i class="fa-solid fa-angle-left"></i>', '<i class="fa-solid fa-angle-right"></i>']
+      autoplayTimeout: 4000,
+      autoplayHoverPause: false,
+      smartSpeed: 900,
+      mouseDrag: false,
+      touchDrag: false,
+      pullDrag: false
     });
 
     /* ---- Customer reviews carousel ---- */
