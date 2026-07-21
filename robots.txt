@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://shailesh7277.github.io/Skoi/sitemap.xml

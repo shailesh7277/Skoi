@@ -278,6 +278,24 @@ img{max-width:100%}
 .timeline h5{font-family:'Poppins',sans-serif;font-weight:700;color:var(--amber-dk);font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;margin:0 0 6px}
 .timeline p{color:var(--muted);font-size:.95rem;margin:0}
 
+/* ---------- Mobile sticky action bar ---------- */
+.mobilebar{display:none}
+@media (max-width:767px){
+  .mobilebar{
+    display:grid;grid-template-columns:repeat(3,1fr);position:fixed;left:0;right:0;bottom:0;z-index:80;
+    background:var(--green-darker);box-shadow:0 -8px 24px -10px rgba(0,0,0,.55);
+    padding-bottom:env(safe-area-inset-bottom);
+  }
+  .mobilebar a{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;padding:10px 6px;color:#e6ecf5;font-family:'Poppins',sans-serif;font-weight:600;font-size:.72rem;border-right:1px solid rgba(255,255,255,.1)}
+  .mobilebar a:last-child{border-right:none}
+  .mobilebar a i{font-size:1.15rem;color:var(--amber)}
+  .mobilebar a:active{background:rgba(255,255,255,.08)}
+  body{padding-bottom:62px}
+  .floasoc{bottom:78px;right:14px}
+  .floasoc a{width:48px;height:48px;font-size:1.3rem}
+  #toTop{bottom:78px;left:14px}
+}
+
 /* ---------- Floating social buttons ---------- */
 .floasoc{position:fixed;right:22px;bottom:22px;z-index:70;display:flex;flex-direction:column;gap:14px}
 .floasoc a{position:relative;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.5rem;box-shadow:0 12px 26px -8px rgba(0,0,0,.4);transition:transform .2s ease}

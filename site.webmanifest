@@ -1,0 +1,15 @@
+{
+  "name": "Shreekamal Oil Industries",
+  "short_name": "Shreekamal",
+  "description": "Manufacturer of 100% pure cotton seed cake (binaula khal) and cattle feed — Hinganghat, Maharashtra.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0c1631",
+  "theme_color": "#132147",
+  "icons": [
+    { "src": "IMAGES/favicon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "IMAGES/favicon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "IMAGES/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" }
+  ]
+}
